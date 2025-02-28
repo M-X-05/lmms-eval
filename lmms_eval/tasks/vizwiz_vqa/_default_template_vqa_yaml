@@ -1,4 +1,4 @@
-dataset_path: lmms-lab/VizWiz-VQA
+dataset_path: /mnt/public/public_datasets/VizWiz-VQA
 output_type: generate_until
 doc_to_visual: !function utils.vizwiz_vqa_doc_to_visual
 doc_to_text: !function utils.vizwiz_vqa_doc_to_text
@@ -6,6 +6,7 @@ doc_to_target: "answer"
 generation_kwargs:
   until:
     - "ASSISTANT:"
+  max_new_tokens: 16
 metadata:
   - version: 0.0
 lmms_eval_specific_kwargs:
